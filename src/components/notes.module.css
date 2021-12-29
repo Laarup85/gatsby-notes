@@ -6,3 +6,7 @@
 .section ul li {
     margin-top: 1.5em;
 }
+
+.section code {
+    font-size: 1.2em;
+}

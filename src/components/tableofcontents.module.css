@@ -6,8 +6,3 @@
     display: flex;
     flex-wrap: wrap;
 }
-
-.list li {
-    margin-right: 1em;
-    text-decoration: underline;
-}

@@ -1,20 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import * as containerStyles from "./tableofcontents.module.css"
+import TableOfContentsItem from "./TableOfContentsItem";
 
 const TableOfContents = (props) => {
-    const [isHovered, setIsHovered] = useState(false);
-
     const nodes = props.nodes;
 
     const listItems = nodes.filter((node) => {
         return node.html?.length;
     }).map((node, index) =>
-        <li
-            key={node.id}
-            onClick={() => props.openNotes(node.id)}
-        >
-            {node.frontmatter.title}
-        </li>
+        <TableOfContentsItem
+            indexKey={index}
+            title={node.frontmatter.title}
+            openNotes={props.openNotes}
+            noteId={node.id}
+        />
     );
 
     return (
