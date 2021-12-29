@@ -1,0 +1,13 @@
+.list {
+    font-size: 1.1em;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list li {
+    margin-right: 1em;
+    text-decoration: underline;
+}
